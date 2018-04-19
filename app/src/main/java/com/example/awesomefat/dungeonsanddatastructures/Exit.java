@@ -19,6 +19,20 @@ public class Exit
 
     public boolean takeExit(Player p)
     {
+
+        if(p.getCurrentRoom() != exits[r1_index])
+        {
+            p.setCurrentRoom(exits[r2_index]);
+
+            return true;
+        }
+
+        else if(p.getCurrentRoom() != exits[r2_index])
+        {
+            p.setCurrentRoom(exits[r1_index]);
+
+            return true;
+        }
         //make the player move to the room they are NOT currently in.
 //        if(p.getCurrentRoom() == this.r1)
 //        {
